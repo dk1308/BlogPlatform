@@ -1,0 +1,71 @@
+<div class="container col-8 mt-3">
+    <h2 class="mt-3">Add Blog Post</h2>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+        <div class="mt-2">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" name="title" class="form-control" [(ngModel)]="blogPost.title">
+        </div>
+        <div class="mt-2">
+            <label for="shortDescription" class="form-label">Short Description</label>
+            <input type="text" id="shortDescription" name="shortDescription" class="form-control"
+                [(ngModel)]="blogPost.shortDescription">
+        </div>
+        <div class="mt-2">
+            <label for="content" class="form-label">Content</label>
+            <div>
+                <ckeditor name="content" [editor]="Editor" [(ngModel)]="blogPost.content"></ckeditor>
+            </div>
+        </div>
+        <div class="mt-2">
+            <label for="featuredImageUrl" class="form-label">Featured Image Url
+                <div class="btn btn-light ms-2" (click)="openModalImageSelector()">Upload Image</div>
+            </label>
+            <ng-container *ngIf="blogPost.featuredImageUrl !== ''">
+                <img height="100" class=" my-2 d-block" [src]="blogPost.featuredImageUrl" />
+            </ng-container>
+            <input type="text" id="featuredImageUrl" name="featuredImageUrl" class="form-control"
+                [(ngModel)]="blogPost.featuredImageUrl">
+        </div>
+        <div class="mt-2">
+            <label for="urlHandle" class="form-label">Url Handle</label>
+            <input type="text" id="urlHandle" name="urlHandle" class="form-control" [(ngModel)]="blogPost.urlHandle">
+        </div>
+        <div class="mt-2">
+            <label for="publishedDate" class="form-label">Published Date</label>
+            <input type="date" id="publishedDate" name="publishedDate" class="form-control"
+                value="{{blogPost.publishedDate}}" [ngModel]="blogPost.publishedDate | date: 'yyy-MM-dd'"
+                (ngModelChange)="blogPost.publishedDate = $event">
+        </div>
+        <div class="mt-2">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" id="author" name="author" class="form-control" [(ngModel)]="blogPost.author">
+        </div>
+
+        <div class="mt-3">
+            <label class="form-label" for="categories">Categories</label>
+            <ng-container *ngIf="categories$ | async as categories">
+                <select class="form-control" name="categories" id="categories" [(ngModel)]="blogPost.categories"
+                    multiple>
+                    <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
+                </select>
+            </ng-container>
+        </div>
+
+        <div class="mt-2">
+            <label class="form-check-label" for="isVisible">isVisible?</label>
+            <input class=" ms-1 form-check-input" type="checkbox" id="isVisible" name="isVisible"
+                [(ngModel)]="blogPost.isVisible">
+        </div>
+        <button type="submit" class="mt-2 btn btn-primary">Save</button>
+    </form>
+</div>
+
+<!-- <ng-container>
+    <div class="modal-image-selector"
+        [ngClass]="{'d-block': isModalOpened, 'd-none': !isModalOpened}">
+        <button type="button" class="btn btn-close"
+            style="position: fixed; top: 66px; right: 50px; padding: 15px; z-index: 11;"
+            (click)="closeModalImageSelector()"></button>
+        <app-image-selector> </app-image-selector>
+    </div>
+</ng-container> -->

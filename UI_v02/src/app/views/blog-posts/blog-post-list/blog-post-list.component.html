@@ -1,0 +1,36 @@
+<div class="container mt-3">
+    <h2 class="mt-3"> Blog Posts List</h2>
+    <div class="mt-3 d-flex justify-content-end">
+        <button class="btn btn-primary" [routerLink]="['/admin/blogPosts/add']">Add</button>
+    </div>
+    <table *ngIf="blogPosts$ | async as b else empty" class="mt-3 table table-bordered">
+        <thead>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Is Visible</th>
+            <th>Categories</th>
+            <th> </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bItem of b">
+                <td>{{bItem.title}}</td>
+                <td>{{bItem.content}}</td>
+                <td>{{bItem.isVisible}}</td>
+                <td>
+                    <div *ngFor="let c of bItem.categories">
+                        <span class="badge bg-secondary me-2">{{c.name}}</span>
+                    </div>
+                </td>
+                <td>
+                    <button class="btn btn-light" [routerLink]="['/admin/blogPosts', bItem.id]">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #empty>
+        <div class="alert alert-warning" role="alert">
+            Blog posts do not exist!
+        </div>
+    </ng-template>
+</div>

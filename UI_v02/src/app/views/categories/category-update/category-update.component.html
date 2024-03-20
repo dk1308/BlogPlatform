@@ -1,0 +1,33 @@
+<ng-container *ngIf="category else empty">
+    <div class="col-7 container">
+        <h2 class="mt-3"> Update category</h2>
+        <form #form="ngForm" (ngSubmit)="onFormSubmit()">
+            <div class="mt-3">
+                <div class="mt-2">
+                    <label class="form-label" for="">Category Id</label>
+                    <input class="form-control" name="categoryId" type="text" disabled value="{{category.id}}">
+                </div>
+                <div class="mt-2">
+                    <label class="form-label" for="">Category Name</label>
+                    <input class="form-control" name="categoryName" type="text" [(ngModel)]="category.name">
+                </div>
+                <div class="mt-2">
+                    <label class="form-label" for="">Category Url Handle</label>
+                    <input class="form-control" name="categoryUrlHandle" type="text" [(ngModel)]="category.urlHandle">
+                </div>
+                <div class="mt-2 d-flex">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                    <button (click)="onDelete()" class="ms-2 btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</ng-container>
+
+<ng-template #empty>
+    <div class="alert alert-warning" role="alert">
+        Category does not exist!
+    </div>
+</ng-template>
