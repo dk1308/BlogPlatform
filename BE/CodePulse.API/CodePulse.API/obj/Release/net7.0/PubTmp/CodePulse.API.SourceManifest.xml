@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\Dev\Course\FullStack_Tutorial\CodePulse\BE\CodePulse.API\CodePulse.API\obj\Release\net7.0\PubTmp\Out\" />
+  <dbfullsql path="D:\Dev\Course\FullStack_Tutorial\CodePulse\BE\CodePulse.API\CodePulse.API\obj\Release\net7.0\PubTmp\EFSQLScripts\CodePulse.API.Data.AuthDBContext.sql" />
+  <dbfullsql path="D:\Dev\Course\FullStack_Tutorial\CodePulse\BE\CodePulse.API\CodePulse.API\obj\Release\net7.0\PubTmp\EFSQLScripts\CodePulse.API.Data.CodePulseDBContext.sql" />
+</sitemanifest>

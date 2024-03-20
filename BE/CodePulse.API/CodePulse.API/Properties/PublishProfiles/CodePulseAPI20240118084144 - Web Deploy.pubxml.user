@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUn/GZEBrPUqZN5Er9F9BPAAAAAACAAAAAAAQZgAAAAEAACAAAAD5HWHbrZF3z7BtLkuptllHeJrHFEdn+qKfcopi4mUf/QAAAAAOgAAAAAIAACAAAABiV3hMlQSA7muNn17Y5211BlH7W/kemwcProy7AAgrqYAAAAB9zN7915iGDukSh6WzrPA4DRk8BrRRfVaxjo7e3DMBZMyg3RlUfPTmjFGbaF7LQdLCjMa8pmEA3YCBh66yzKukJQeS9M+HYYi+jDewLlb4t8BuwkLFAM1XQnxb2PVB7jNtiG/6/Asmb1YjpCpn2ZzYKFtFBo7KYHvr1TObO2lx9kAAAABMxLwWlwqhjTCaFCA5eRHaF64bnlRlXqyGzX7efPsaxi8U4YFcd9eWxLgZcOv34bm5sOjkD9NVkj9WjbVV2lJ6</EncryptedPassword>
+    <History>True|2024-01-20T13:02:47.4231924Z;True|2024-01-18T09:01:55.2499764+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="CodePulseConnectionString">
+      <Value>Server=LAPTOP-8EJE3NEE%3bDatabase=CodePulseDB%3bUser Id=sa%3bPassword=123456%3bTrustServerCertificate=true%3bTrusted_Connection=SSPI%3bEncrypt=false%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="CodePulse.API.Data.AuthDBContext">
+      <Value>Data Source=codepulseapidbserver.database.windows.net,1433%3bInitial Catalog=CodePulse.API_db%3bUser ID=khoadev1308%3bPassword=Dangkhoa13082003</Value>
+    </EFMigrations>
+    <EFMigrations Include="CodePulse.API.Data.CodePulseDBContext">
+      <Value>Data Source=codepulseapidbserver.database.windows.net,1433%3bInitial Catalog=CodePulse.API_db%3bUser ID=khoadev1308%3bPassword=Dangkhoa13082003</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="CodePulseAPI20240118084144" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Dev\\Course\\FullStack_Tutorial\\CodePulse\\BE\\CodePulse\.API\\CodePulse\.API\\obj\\Release\\net7\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="CodePulse.API.Data.AuthDBContext" description="" value="Data Source=codepulseapidbserver.database.windows.net,1433;Initial Catalog=CodePulse.API_db;User ID=khoadev1308;Password=Dangkhoa13082003" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Dev\\Course\\FullStack_Tutorial\\CodePulse\\BE\\CodePulse\.API\\CodePulse\.API\\obj\\Release\\net7\.0\\PubTmp\\EFSQLScripts\\CodePulse\.API\.Data\.AuthDBContext\.sql$" />
+  </parameter>
+  <parameter name="CodePulse.API.Data.CodePulseDBContext" description="" value="Data Source=codepulseapidbserver.database.windows.net,1433;Initial Catalog=CodePulse.API_db;User ID=khoadev1308;Password=Dangkhoa13082003" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\Dev\\Course\\FullStack_Tutorial\\CodePulse\\BE\\CodePulse\.API\\CodePulse\.API\\obj\\Release\\net7\.0\\PubTmp\\EFSQLScripts\\CodePulse\.API\.Data\.CodePulseDBContext\.sql$" />
+  </parameter>
+</parameters>
